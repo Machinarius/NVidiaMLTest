@@ -39,8 +39,7 @@ namespace NvidiaMLTest
 
         public static IntPtr GetDeviceHandleByIndex(int deviceIndex)
         {
-            var deviceHandle = IntPtr.Zero;
-            ThrowIfReturnIsError(NVMLFunctions.GetDeviceHandleByIndex(deviceIndex, out deviceHandle));
+            ThrowIfReturnIsError(NVMLFunctions.GetDeviceHandleByIndex(deviceIndex, out var deviceHandle));
             return deviceHandle;
         }
 
