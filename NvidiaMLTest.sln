@@ -2,18 +2,43 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NvidiaMLTest", "NvidiaMLTest.csproj", "{1312148E-F832-419A-A695-DF0EEB644464}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WindowsNVMLLocator", "WindowsNVMLLocator\WindowsNVMLLocator.vcxproj", "{C336E6EE-0396-427F-9D81-3FD8568EC7C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NvidiaMLClient", "NVMLClient\NvidiaMLClient.csproj", "{47516EC1-1DCA-4957-9948-D1E5C004F3FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1312148E-F832-419A-A695-DF0EEB644464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1312148E-F832-419A-A695-DF0EEB644464}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1312148E-F832-419A-A695-DF0EEB644464}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1312148E-F832-419A-A695-DF0EEB644464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C336E6EE-0396-427F-9D81-3FD8568EC7C1}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{C336E6EE-0396-427F-9D81-3FD8568EC7C1}.Debug|Any CPU.Build.0 = Debug|Win32
+		{C336E6EE-0396-427F-9D81-3FD8568EC7C1}.Debug|x64.ActiveCfg = Debug|x64
+		{C336E6EE-0396-427F-9D81-3FD8568EC7C1}.Debug|x64.Build.0 = Debug|x64
+		{C336E6EE-0396-427F-9D81-3FD8568EC7C1}.Debug|x86.ActiveCfg = Debug|Win32
+		{C336E6EE-0396-427F-9D81-3FD8568EC7C1}.Debug|x86.Build.0 = Debug|Win32
+		{C336E6EE-0396-427F-9D81-3FD8568EC7C1}.Release|Any CPU.ActiveCfg = Release|Win32
+		{C336E6EE-0396-427F-9D81-3FD8568EC7C1}.Release|x64.ActiveCfg = Release|x64
+		{C336E6EE-0396-427F-9D81-3FD8568EC7C1}.Release|x64.Build.0 = Release|x64
+		{C336E6EE-0396-427F-9D81-3FD8568EC7C1}.Release|x86.ActiveCfg = Release|Win32
+		{C336E6EE-0396-427F-9D81-3FD8568EC7C1}.Release|x86.Build.0 = Release|Win32
+		{47516EC1-1DCA-4957-9948-D1E5C004F3FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47516EC1-1DCA-4957-9948-D1E5C004F3FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47516EC1-1DCA-4957-9948-D1E5C004F3FA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{47516EC1-1DCA-4957-9948-D1E5C004F3FA}.Debug|x64.Build.0 = Debug|Any CPU
+		{47516EC1-1DCA-4957-9948-D1E5C004F3FA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{47516EC1-1DCA-4957-9948-D1E5C004F3FA}.Debug|x86.Build.0 = Debug|Any CPU
+		{47516EC1-1DCA-4957-9948-D1E5C004F3FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47516EC1-1DCA-4957-9948-D1E5C004F3FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47516EC1-1DCA-4957-9948-D1E5C004F3FA}.Release|x64.ActiveCfg = Release|Any CPU
+		{47516EC1-1DCA-4957-9948-D1E5C004F3FA}.Release|x64.Build.0 = Release|Any CPU
+		{47516EC1-1DCA-4957-9948-D1E5C004F3FA}.Release|x86.ActiveCfg = Release|Any CPU
+		{47516EC1-1DCA-4957-9948-D1E5C004F3FA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
