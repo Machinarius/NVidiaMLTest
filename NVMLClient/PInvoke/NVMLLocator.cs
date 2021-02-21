@@ -6,7 +6,7 @@ using System.Text;
 using Microsoft.Win32;
 using Microsoft.Win32.SafeHandles;
 
-namespace NvidiaMLTest.PInvoke
+namespace NvidiaMLClient.PInvoke
 {
     public static class NVMLLocator
     {

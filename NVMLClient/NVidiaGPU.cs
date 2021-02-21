@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NvidiaMLTest
+namespace NvidiaMLClient
 {
     public class NVidiaGPU
     {

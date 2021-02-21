@@ -2,9 +2,9 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Text;
-using NvidiaMLTest.PInvoke;
+using NvidiaMLClient.PInvoke;
 
-namespace NvidiaMLTest
+namespace NvidiaMLClient
 {
     [DebuggerStepThrough]
     [DebuggerNonUserCode]
