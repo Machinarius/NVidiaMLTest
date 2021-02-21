@@ -17,9 +17,9 @@ namespace NvidiaMLClient
 
         [DebuggerStepThrough]
         [DebuggerNonUserCode]
-        private static void ThrowIfReturnIsError(NVMLFunctions.ReturnCodes returnCode)
+        private static void ThrowIfReturnIsError(NVMLReturnCodes returnCode)
         {
-            if (returnCode == NVMLFunctions.ReturnCodes.Success)
+            if (returnCode == NVMLReturnCodes.Success)
             {
                 return;
             }
@@ -50,7 +50,7 @@ namespace NvidiaMLClient
             return stringBuffer.ToString();
         }
 
-        public static NVMLFunctions.Architectures GetArchitecture(IntPtr deviceHandle)
+        public static Architectures GetArchitecture(IntPtr deviceHandle)
         {
             ThrowIfReturnIsError(NVMLFunctions.GetArchitecture(deviceHandle, out var architecture));
             return architecture;
@@ -64,7 +64,7 @@ namespace NvidiaMLClient
 
         public static uint GetTemperature(IntPtr deviceHandle)
         {
-            ThrowIfReturnIsError(NVMLFunctions.GetTemperature(deviceHandle, NVMLFunctions.TemperatureSensors.GPUSensor, out var temperature));
+            ThrowIfReturnIsError(NVMLFunctions.GetTemperature(deviceHandle, TemperatureSensors.GPUSensor, out var temperature));
             return temperature;
         }
 

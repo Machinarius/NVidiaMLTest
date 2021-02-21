@@ -45,7 +45,12 @@ namespace NvidiaMLClient.PInvoke
                 ));
 
                 var registryKey = RegistryKey.FromHandle(new SafeRegistryHandle(registryKeyHandle, true));
-                var registryValue = (string[]) registryKey.GetValue("OpenGLDriverName");
+                var registryValue = registryKey.GetValue("OpenGLDriverName") as string[];
+                if (registryValue == null || registryValue.Length != 1)
+                {
+                    continue;
+                }
+
                 var nvidiaDriverFilePath = registryValue[0];
                 var nvidiaDriverStore = Path.GetDirectoryName(nvidiaDriverFilePath);
                 if (File.Exists(Path.Combine(nvidiaDriverStore, "nvml.dll"))) {

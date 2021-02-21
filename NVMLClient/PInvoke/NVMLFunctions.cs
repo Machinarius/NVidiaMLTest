@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -9,6 +10,25 @@ namespace NvidiaMLClient.PInvoke
         static NVMLFunctions()
         {
             NVMLLocator.EnsureNVMLCanBeLocated();
+            NativeLibrary.SetDllImportResolver(Assembly.GetExecutingAssembly(), DllImportResolver);
+        }
+
+        // References:
+        // https://github.com/dotnet/samples/blob/master/core/extensions/DllMapDemo/Map.cs
+        // https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.dllimportresolver?view=net-5.0
+        private static IntPtr DllImportResolver(string libraryName, Assembly assembly, DllImportSearchPath? searchPath)
+        {
+            if (libraryName == "nvml.dll")
+            {
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                {
+                    return NativeLibrary.Load("nvidia-ml");
+                }
+
+                return NativeLibrary.Load(libraryName);
+            }
+
+            throw new InvalidOperationException("This mapper may only map NVML libraries");
         }
 
         // https://github.com/NVIDIA/gpu-monitoring-tools/blob/master/bindings/go/nvml/nvml.h
