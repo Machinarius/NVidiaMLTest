@@ -22,7 +22,7 @@ namespace NvidiaMLClient.PInvoke
             {
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
                 {
-                    return NativeLibrary.Load("nvidia-ml");
+                    return NativeLibrary.Load("libnvidia-ml.so.1");
                 }
 
                 return NativeLibrary.Load(libraryName);
